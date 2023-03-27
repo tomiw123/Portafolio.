@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="img/yo-perfil.jpg"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+		<script>
+			window.addEventListener("DOMContentLoaded", ()=>{
+  		VANTA.BIRDS({
+      el: '#vanta',
+  		color1: 0xffffff,
+  		color2: 0x0,
+  		colorMode: "lerp",
+  		birdSize: 1.20,
+  		wingSpan: 40.00,
+  		quantity: 2.00,
+  		backgroundAlpha: 0.00
+		})
+				setTimeout(()=>{
+					const main = document.querySelector("main")
+					main.style.opacity = 1;
+				 	main.style.filter = "blur(0px)"
+           const header = document.querySelector("header")
+           header.style.opacity = 1;
+				 	header.style.filter = "blur(0px)"
+				}, 1500)
+
+	})
+		</script>
+    
+    <title>TW Desarrolo Wep</title>
+  </head>
+
+  <body>
+    <div id="vanta"></div>
+    <!-- SECCION INICIO -->
+    <header>
+      <div class="contenido-header">
+        <h1>/TW/</h1>
+        <nav id="nav" class="">
+          <ul id="links">
+            <li>
+              <a
+                href="#inicio"
+                class="seleccionado"
+                onclick="seleccionar(this)"
+                >INICIO</a
+              >
+            </li>
+            <li>
+              <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+            </li>
+            <li>
+              <a href="#tecnogolias" onclick="seleccionar(this)">TEGNOLOGIAS</a>
+            </li>
+            <li>
+              <a href="#portafolio" onclick="seleccionar(this)"
+                >PORTAFOLIO</a
+              >
+            </li>
+            <li>
+              <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Iconos del menu responsive -->
+        <div id="icono-nav" onclick="responsiveMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- Iconos de las redes sociales -->
+        <div id="redes" class="">
+          <a href="https://www.instagram.com/tomii_walker/" target="_blank"><i class="fa-brands fa-instagram icono"></i></a>
+
+          <a href="https://twitter.com/TomiWalker4?s=09"  target="_blank"><i class="fa-brands fa-twitter icono"></i></a>
+
+          <a href="https://www.linkedin.com/in/tomas-walker-fullstack/" target="_blank"><i class="fa-brands fa-linkedin icono"  ></i></a>
+
+          <a href="https://github.com/tomiw123" target="_blank"><i class="fa-brands fa-github icono" ></i></a>
+          
+        </div>
+      </div>
+    </header>
+    <main>
+    <section id="inicio">
+      <div class="contenido">
+        
+        <div class="presentacion">
+          <p class="bienvenida">Bienvenidos</p>
+          <h2>Soy<span>Tomas Walker</span>, Desarrolador Web</h2>
+
+          <a href="#portafolio">Ir a Portafolio</a>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi">
+      <div class="contenedor-foto">
+        <img src="img/yo-perfil.jpg" />
+      </div>
+      <div class="sobremi">
+        <p class="titulo-seccion">Sobre Mi</p>
+        <h2>Hola, soy<span> Tomas Walker</span></h2>
+        <h3>Desarrolador Web</h3>
+        <p>
+          Me considero una persona creativa como también proactiva, curiosa y
+          apasionada a los retos. Fue un camino arduo hacia la industria de IT,
+          con muchos obstáculos en el medio, pero hoy puedo decir que es un
+          lugar donde me siento cómodo y puedo expresarme a mi manera.
+        </p>
+        <p>
+          Aparte de ser un FullStack Developer, me apasionan mis demás tareas,
+          como dictar clases de Taekwondo, mi emprendimiento gastronómico, la
+          carrera universitaria donde estoy, la música, el gimnasio, la familia,
+          mis amigos, mis mascotas y disfrutar de lo simple.
+        </p>
+        <a href="https://drive.google.com/file/d/12wGPhM81z-dT5qRU9XC_kJP-YR3eIbBu/view?usp=share_link" target="_blank">Descargar CV</a>
+      </div>
+    </section>
+    <!-- SECCION SERVICIOS -->
+    <!-- <section id="servicios">
+      <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icon"><i class="fa-solid fa-code"></i></span>
+          <h4>Diseño de Sitios Wep</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Wep</li>
+            <li>Graphic</li>
+            <li>SEO</li>
+          </ul>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            adipisci laboriosam eius, numquam repellat placeat ratione
+            dignissimos.
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icon"><i class="fa-solid fa-code"></i></span>
+          <h4>Diseño de Sitios Wep</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Wep</li>
+            <li>Graphic</li>
+            <li>SEO</li>
+          </ul>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            adipisci laboriosam eius, numquam repellat placeat ratione
+            dignissimos.
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icon"><i class="fa-solid fa-code"></i></span>
+          <h4>Diseño de Sitios Wep</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Wep</li>
+            <li>Graphic</li>
+            <li>SEO</li>
+          </ul>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            adipisci laboriosam eius, numquam repellat placeat ratione
+            dignissimos.
+          </p>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icon"><i class="fa-solid fa-code"></i></span>
+          <h4>Diseño de Sitios Wep</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Wep</li>
+            <li>Graphic</li>
+            <li>SEO</li>
+          </ul>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            adipisci laboriosam eius, numquam repellat placeat ratione
+            dignissimos.
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icon"><i class="fa-solid fa-code"></i></span>
+          <h4>Diseño de Sitios Wep</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Wep</li>
+            <li>Graphic</li>
+            <li>SEO</li>
+          </ul>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            adipisci laboriosam eius, numquam repellat placeat ratione
+            dignissimos.
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icon"><i class="fa-solid fa-code"></i></span>
+          <h4>Diseño de Sitios Wep</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Wep</li>
+            <li>Graphic</li>
+            <li>SEO</li>
+          </ul>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            adipisci laboriosam eius, numquam repellat placeat ratione
+            dignissimos.
+          </p>
+        </div>
+      </div>
+    </section> -->
+    <!-- SECCION HABLIDADES  -->
+    <section id="tecnogolias">
+    <div class="contenedor-skills" id="skills">
+      <h3>HABILIDADES</h3>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Html & Css</p>
+          <span class="porcentaje">95%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="html"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Javascript</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="js"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Bases de Datos (Mondo DB, Postgresql)</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="bd"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Typescrip</p>
+          <span class="porcentaje">85%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="tp"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>React, React-Native</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="rc"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="lista"> </span>Node.js</p>
+          <span class="porcentaje">90%</span>
+        </div>
+
+        <div class="barra">
+          <div class="" id="node"></div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- SECCION PORTAFOLIO  -->
+    <section id="portafolio">
+      <h3 class="titulo-seccion">MIS PROYECTOS</h3>
+      <div class="fila">
+ 
+
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto2.png" alt="" />
+          <div class="info">
+            <h4>PROYECTO INDIVIDUAL (DOGS)</h4>
+            <a href="https://www.youtube.com/watch?v=49Kz76J8w6U"target="_blank">Link video presentacion</a>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto1.png" alt="" />
+          <div class="info">
+            <h4>PROYECTO INDIVIDUAL (COUNTRIES)</h4>
+            <a href="https://www.youtube.com/watch?v=_dczkFkKQ2w"target="_blank">Link video presentacion</a>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto3.png" alt="" />
+          <div class="info">
+            <h4>PROYECTO GRUPAL (DOS DAGAS)</h4>
+            <a href="https://www.youtube.com/watch?v=U6reHBThU-0" target="_blank">Link video presentacion</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="fila">
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto4.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion del Proyecto</h4>
+            <p>Diseño Wep</p>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto5.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion del Proyecto</h4>
+            <p>Diseño Wep</p>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto6.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion del Proyecto</h4>
+            <p>Diseño Wep</p>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto7.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion del Proyecto</h4>
+            <p>Diseño Wep</p>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto8.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion del Proyecto</h4>
+            <p>Diseño Wep</p>
+          </div>
+        </div>
+
+        <div class="proyecto">
+          <div class="everlay"></div>
+          <img src="img/proyecto9.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion del Proyecto</h4>
+            <p>Diseño Wep</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- SECCION CONTACTO -->
+    <section id="contacto">
+      <h3 class="titulo-seccion">Contactame</h3>
+      <div class="contactame">
+        <p>📞 +54 3493408225</p>
+        <p>📩 tomacowalker@gmail.com</p>
+      </div>
+
+      <!-- <div class="contenedor-from">
+        <from action="">
+          <div class="fila mitad">
+            <input
+              type="text"
+              placeholder="Nombre Completo"
+              class="input-mitad"
+            />
+            <input
+              type="text"
+              placeholder="Direccion de Email"
+              class="input-mitad"
+            />
+          </div>
+          <div class="fila">
+            <input put type="text" placeholder="Tema.." class="input-full" />
+          </div>
+          <div class="fila">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje.."
+              class="input-full"
+            ></textarea>
+          </div>
+          <input type="submit" value="Enviar Mensaje" class="btn-enviar" />
+        </from>
+      </div> -->
+    </section>
+    <!-- SECCION FOOTER -->
+    <footer>
+      <p>Todos los derechos reservados</p>
+      <div id="redes" class="">
+        <a href="https://www.instagram.com/tomii_walker/" target="_blank"><i class="fa-brands fa-instagram icono"></i></a>
+
+        <a href="https://twitter.com/TomiWalker4?s=09"  target="_blank"><i class="fa-brands fa-twitter icono"></i></a>
+
+        <a href="https://www.linkedin.com/in/tomas-walker-fullstack/" target="_blank"><i class="fa-brands fa-linkedin icono"  ></i></a>
+
+        <a href="https://github.com/tomiw123" target="_blank"><i class="fa-brands fa-github icono" ></i></a>
+      </div>
+    </footer>
+  </main>
+    <script src="script.js"></script>
+     
+  </body>
+</html>
